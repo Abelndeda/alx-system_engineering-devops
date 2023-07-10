@@ -1,0 +1,8 @@
+#!/bin/bash
+while IFS=':' read -r username _ uid _ _ home _; do
+if (( uid >= 1000 )); then
+        echo "Username: $username"
+        echo "Home Directory: $home"
+        echo "-------------------------"
+    fi
+done < /etc/passwd | sort -t ':' -k 1,1
