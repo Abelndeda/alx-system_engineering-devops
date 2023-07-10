@@ -1,0 +1,4 @@
+#!/bin/bash
+read -r input
+modified_input=$(echo "$input" | sed 's/A/Z/g; s/c/e/g')
+echo "$modified_input"
