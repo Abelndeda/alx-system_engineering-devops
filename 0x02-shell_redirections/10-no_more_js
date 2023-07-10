@@ -1,0 +1,12 @@
+#!/bin/bash
+delete_js_files() {
+    local file
+    for file in "$1"/*; do
+        if [[ -f "$file" && "${file##*.}" == "js" ]]; then
+            rm "$file"
+            echo "Deleted file: $file"
+        elif [[ -d "$file" ]]; then
+            delete_js_files "$file"
+        fi
+    done
+}
