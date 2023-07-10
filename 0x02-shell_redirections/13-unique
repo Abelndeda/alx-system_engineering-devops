@@ -1,0 +1,12 @@
+#!/bin/bash
+read -r -a words
+sorted_words=($(printf "%s\n" "${words[@]}" | sort))
+for ((i=0; i<${#sorted_words[@]}; i++)); do
+    current_word="${sorted_words[i]}"
+    previous_word="${sorted_words[i-1]}"
+    next_word="${sorted_words[i+1]}"
+
+    if [[ "$current_word" != "$previous_word" && "$current_word" != "$next_word" ]]; then
+        echo "$current_word"
+    fi
+done
