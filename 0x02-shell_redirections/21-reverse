@@ -1,5 +1,2 @@
-#!/bin/bash
-read -r input
-reversed_input=$(echo "$input" | rev)
-
-echo "$reversed_input"
+#!/bin/bas
+rev

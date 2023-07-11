@@ -1,5 +1,3 @@
 #!/bin/bash
 read -r input
-modified_input=$(echo "$input" | tr -d 'cC')
-echo "$modified_input"
-
+modified_input=$(
