@@ -1,1 +1,2 @@
-0x00. Shell, basics
+0x02-shell_redirections and filters Readme file
+shell_variables_expansions
