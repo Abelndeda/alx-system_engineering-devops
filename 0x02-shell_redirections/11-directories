@@ -1,7 +1,2 @@
 #!/bin/bash
-count=0
-for entry in $(find . -mindepth 1 -maxdepth 1 -type d); do
- if [[ "$entry" != "." && "$entry" != ".." ]]; then
-        ((count++))
-    fi
-done
+find . -type d -not -name '.' | wc -l
